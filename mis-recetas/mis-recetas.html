@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Enlace icono menu hamburguesa -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- framework para solo para style.css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Recetario</title>
+
+</head>
+<!-- Barra de navegaciom -->
+<header class="header" >
+    <a href="#" class="logo" > El Recetario</a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <nav class="navbar" >
+        <a href="../index.html">Menu</a>
+        <a href="#">Mis recetas</a>
+
+    </nav>
+
+</header>
+<body>
+    <div class="container">
+        <h1>Recetario Interactivo</h1>
+    
+        <!-- Formulario para añadir receta -->
+        <form id="recipe-form">
+          <label for="recipe-name">Nombre de la receta:</label>
+          <input type="text" id="recipe-name" required>
+          
+          <label for="image-url">URL de la imagen:</label>
+          <input type="url" id="image-url" required>
+          
+          <label for="category">Categoria:</label>
+          <textarea id="category" required></textarea>
+
+          <label for="ingredients">Ingredientes:</label>
+          <textarea id="ingredients" required></textarea>
+          
+          <label for="instructions">Instrucciones:</label>
+          <textarea id="instructions" required></textarea>
+    
+          <button type="submit">Agregar Receta</button>
+        </form>
+    
+        <!-- Sección para buscar recetas -->
+        <h2>Buscar Receta:</h2>
+        <input type="text" id="search" placeholder="Buscar por nombre..." oninput="searchRecipe()">
+    
+        <!-- Lista de recetas -->
+        <h2>Recetas:</h2>
+        <ul id="recipe-list">
+          <!-- Las recetas se agregarán aquí dinámicamente -->
+        </ul>
+
+      </div>
+
+
+<script src="script.js"></script>
+    
+</body>
+</html>
